@@ -1,5 +1,7 @@
 package app;
 
+import java.util.ArrayList;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -8,7 +10,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		String fuente = JsonUtiles.leer("arch");
+		JsonControlador jeyson = new JsonControlador();
+		ArrayList<Persona> arrayPersonas = new ArrayList<>();
+		
+		arrayPersonas = jeyson.consumirJson();
+		
+		System.out.println(arrayPersonas);
+		
+		/*String fuente = JsonUtiles.leer("arch");
 		System.out.println(fuente);
 		
 		try {
@@ -104,7 +113,7 @@ public class Main {
 			
 		} catch (JSONException e) {
 			
-		}
+		}*/
 
 	}
 
